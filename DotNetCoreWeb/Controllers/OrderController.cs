@@ -10,6 +10,7 @@ namespace DotNetCoreWeb.Controllers
     [Route("api/[controller]/[action]")]
     public class OrderController : Controller
     {
+        
         public IActionResult Index()
         {
             return View();

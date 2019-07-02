@@ -7,7 +7,7 @@ namespace MyProject.EntityFrameworkCore
     public class EfDbContext : DbContext
     {
         public EfDbContext()
-            : base()
+            : base(null)
         { }
 
         public virtual DbSet<Order> Orders { get; set; }
@@ -15,5 +15,10 @@ namespace MyProject.EntityFrameworkCore
         public virtual DbSet<Goods> Goods { get; set; }
 
         public virtual DbSet<Customer> Customers { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
     }
 }
