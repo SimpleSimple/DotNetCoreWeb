@@ -1,0 +1,8 @@
+_book/
+_ebook/
+output/
+node_modules/
+/MyProject.Core/obj
+/MyProject.Core/bin
+/MyProject.EntityFrameworkCore/obj
+/MyProject.EntityFrameworkCore/bin

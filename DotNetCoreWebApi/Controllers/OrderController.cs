@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MyProject.Core;
 
 namespace DotNetCoreWebApi.Controllers
 {
@@ -21,7 +22,7 @@ namespace DotNetCoreWebApi.Controllers
             var order = new Order
             {
                 Id = orderId,
-                OrderName = orderName,
+                OrderNo = Guid.NewGuid().ToString(),
                 CreateId = 1000,
                 CreateTime = DateTime.Now
             };
