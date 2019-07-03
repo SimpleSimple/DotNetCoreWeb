@@ -1,15 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MyProject.Core;
 using System;
 using System.Configuration;
+using System.IO;
 
 namespace MyProject.EntityFrameworkCore
 {
     public class EfDbContext : DbContext
     {
-        public EfDbContext(DbContextOptions<EfDbContext> options)
-            : base(options)
-        { }
+        //public EfDbContext(DbContextOptions<EfDbContext> options)
+        //    : base(options)
+        //{ }
 
         public virtual DbSet<Order> Orders { get; set; }
 
@@ -24,7 +26,17 @@ namespace MyProject.EntityFrameworkCore
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString);
+            //var config = new ConfigurationBuilder()
+            //    .SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("appsettings.json")
+            //    .Build();
+
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
+
+            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection"));
         }
     }
 }
