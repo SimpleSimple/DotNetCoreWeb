@@ -1,13 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyProject.Core;
 using System;
+using System.Configuration;
 
 namespace MyProject.EntityFrameworkCore
 {
     public class EfDbContext : DbContext
     {
-        public EfDbContext()
-            : base(null)
+        public EfDbContext(DbContextOptions<EfDbContext> options)
+            : base(options)
         { }
 
         public virtual DbSet<Order> Orders { get; set; }
@@ -19,6 +20,11 @@ namespace MyProject.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString);
         }
     }
 }
