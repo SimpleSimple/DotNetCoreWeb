@@ -17,7 +17,7 @@ namespace DotNetCoreWeb.Controllers
         {
             using (var db = new EfDbContext())
             {
-                var output = new List<GoodsOutput>();
+                var list = new List<GoodsOutput>();
                 var goods = db.Goods.ToList();
                 foreach (var item in goods)
                 {
@@ -29,11 +29,11 @@ namespace DotNetCoreWeb.Controllers
 
                     foreach (var key in ht.Keys)
                     {
-                        dto.Operate = $"<a href=\"{key}\">{ht[key]}</a>";
+                        dto.Operate = $"<a v-on:click=\"{key}\" href=\"javascript:;\">{ht[key]}</a>";
                     }
-                    output.Add(dto);
+                    list.Add(dto);
                 }
-                return View(output);
+                return View(list);
             }
         }
 

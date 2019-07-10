@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9E022B10-5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject", "XUnitTestProject\XUnitTestProject.csproj", "{C60566AD-C130-4CC4-AC50-056C69378F5D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ace", "Ace\Ace.csproj", "{2A19EAC1-18D7-4A83-AE00-20957C5BD06A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetEx", "DotNetEx\DotNetEx.csproj", "{20B3AFA6-1D14-4934-9114-ACE3ABB42A36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,14 @@ Global
 		{C60566AD-C130-4CC4-AC50-056C69378F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C60566AD-C130-4CC4-AC50-056C69378F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C60566AD-C130-4CC4-AC50-056C69378F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A19EAC1-18D7-4A83-AE00-20957C5BD06A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A19EAC1-18D7-4A83-AE00-20957C5BD06A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A19EAC1-18D7-4A83-AE00-20957C5BD06A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A19EAC1-18D7-4A83-AE00-20957C5BD06A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B3AFA6-1D14-4934-9114-ACE3ABB42A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B3AFA6-1D14-4934-9114-ACE3ABB42A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B3AFA6-1D14-4934-9114-ACE3ABB42A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B3AFA6-1D14-4934-9114-ACE3ABB42A36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
