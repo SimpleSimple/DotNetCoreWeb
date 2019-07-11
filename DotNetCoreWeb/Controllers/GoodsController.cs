@@ -12,13 +12,25 @@ namespace DotNetCoreWeb.Controllers
     public class GoodsController : Controller
     {
         private Hashtable ht = new Hashtable();
+        private readonly EfDbContext _db;
+
+        public GoodsController(EfDbContext context)
+        {
+            this._db = context;
+        }
 
         public IActionResult Index()
         {
-            using (var db = new EfDbContext())
+            //using (var db = new EfDbContext())
+            //{
+            var list = new List<GoodsOutput>();
+            var goods = _db.Goods.ToList();
+            if (goods == null)
             {
-                var list = new List<GoodsOutput>();
-                var goods = db.Goods.ToList();
+                throw new Exception("Goods为空");
+            }
+            if (goods != null && goods.Count > 0)
+            {
                 foreach (var item in goods)
                 {
                     var dto = new GoodsOutput();
@@ -33,8 +45,9 @@ namespace DotNetCoreWeb.Controllers
                     }
                     list.Add(dto);
                 }
-                return View(list);
             }
+            ViewBag.ReturnModel = System.Web.HttpUtility.HtmlDecode(Ace.JsonHelper.Serialize(list));
+            return View();
         }
 
         public string hello()
