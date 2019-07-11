@@ -1,9 +1,10 @@
 ﻿@using DotNetCoreWeb.DTO
 @using MyProject.Core
+
 @model List<GoodsOutput>
 <h1>商品列表</h1>
 
-<table class="table">
+<table class="table" id="app">
     <thead>
         <tr>
             <td>序号</td>
@@ -11,12 +12,37 @@
             <td>操作</td>
         </tr>
     </thead>
-    @foreach (GoodsOutput item in Model)
-    {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@Html.Raw(item.Operate)</td>
-        </tr>
-    }
+    @*@foreach (GoodsOutput item in Model)
+        {*@
+    <tr v-for="item in goods">
+        <td>{{item.Id}}</td>
+        <td>{{item.Name}}</td>
+        
+    </tr>
+    @*}*@
 </table>
+
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/vue/1.0.28/vue.min.js"></script>
+    <script>
+        //$(function () {
+        //    function do_miaosha(orderid) {
+        //        if (!orderid) return;
+
+        //    }
+        //})
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                goods: @System.Web.HttpUtility.HtmlDecode(Ace.JsonHelper.Serialize(Model))
+            },
+            methods: {
+                do_miaosha: function () {
+                    alert('hello');
+                }
+            }
+        });
+    </script>
+}

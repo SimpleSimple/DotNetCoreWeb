@@ -13,3 +13,8 @@ node_modules/
 .vs/
 /XUnitTestProject/bin/Debug/netcoreapp2.2
 /XUnitTestProject/obj
+/DotNetEx/bin
+/DotNetEx/obj
+/Ace/bin
+/Ace/obj
+
