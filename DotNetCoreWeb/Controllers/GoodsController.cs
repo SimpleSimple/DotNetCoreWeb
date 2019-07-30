@@ -54,5 +54,13 @@ namespace DotNetCoreWeb.Controllers
         {
             return "hello";
         }
+
+        public async Task<string> test()
+        {
+            for (int i = 1; i <= 100000; i++) {
+                // calc code
+            }
+            return "hello";
+        }
     }
 }

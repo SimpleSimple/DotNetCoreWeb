@@ -1,0 +1,11 @@
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\bin\Debug\netcoreapp2.2\ConsoleApp.Tests.deps.json
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\bin\Debug\netcoreapp2.2\ConsoleApp.Tests.runtimeconfig.json
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\bin\Debug\netcoreapp2.2\ConsoleApp.Tests.runtimeconfig.dev.json
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\bin\Debug\netcoreapp2.2\ConsoleApp.Tests.dll
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\bin\Debug\netcoreapp2.2\ConsoleApp.Tests.pdb
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.csprojAssemblyReference.cache
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.csproj.CoreCompileInputs.cache
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.AssemblyInfoInputs.cache
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.AssemblyInfo.cs
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.dll
+E:\MyWork\Projects\DotNetCoreWeb\ConsoleApp.Tests\obj\Debug\netcoreapp2.2\ConsoleApp.Tests.pdb
